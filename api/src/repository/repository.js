@@ -1,6 +1,5 @@
 import { con } from './connection.js'
 
-
 export async function buscar(id) {
     const comando =
         `SELECT id_anime		id,
@@ -10,4 +9,15 @@ export async function buscar(id) {
     
     const [linhas] = await con.query(comando, [id]);
     return linhas[0];
+}
+
+export async function inserir(anime) {
+    const comando = 
+        `INSERT INTO tb_filme (id_anime, nm_anime)
+                       VALUES (?, ?) `
+    
+    const [resposta] = await con.query(comando, [filme.usuario, filme.nome, filme.sinopse, filme.avaliacao, filme.lancamento, filme.disponivel]);
+    filme.id = resposta.insertId;
+
+    return filme;
 }
