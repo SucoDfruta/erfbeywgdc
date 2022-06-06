@@ -2,7 +2,7 @@ import { con } from './connection.js'
 
 
 
-export async function login(nome) {
+export async function buscar(nome) {
     const comando = 
         `select id_anime 		id,
                 nm_anime		nome,
