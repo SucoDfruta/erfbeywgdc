@@ -3,7 +3,6 @@ import express from 'express'
 import cors from 'cors'
 
 import controller from './controller/controller.js';
-import  repository from './controller/repository.js';
 
 const server = express();
 server.use (cors());
