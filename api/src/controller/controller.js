@@ -1,5 +1,7 @@
 import { Router } from "express";
 
+import { buscar } from "../repository/repository.js"; 
+
 const server = Router();
 
 
