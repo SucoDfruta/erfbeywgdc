@@ -16,8 +16,8 @@ export async function inserir(anime) {
         `INSERT INTO tb_filme (id_anime, nm_anime)
                        VALUES (?, ?) `
     
-    const [resposta] = await con.query(comando, [filme.usuario, filme.nome, filme.sinopse, filme.avaliacao, filme.lancamento, filme.disponivel]);
-    filme.id = resposta.insertId;
+    const [resposta] = await con.query(comando, [anime.nome]);
+    anime.id = resposta.insertId;
 
     return filme;
 }

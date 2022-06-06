@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { con } from './connection.js'
 import { buscar, inserir} from "../repository/repository.js"; 
 
 const server = Router();
@@ -37,4 +36,4 @@ server.post('/anime', async (req, resp) => {
     }
 });
 
-export default server
+export default server;
