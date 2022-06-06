@@ -2,6 +2,7 @@ import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
 
+import controller from './controller/usuarioController.js';
 
 const server = express();
 server.use (cors());
