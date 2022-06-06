@@ -36,3 +36,5 @@ server.post('/anime', async (req, resp) => {
         })
     }
 });
+
+export default server
