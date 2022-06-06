@@ -3,10 +3,10 @@ import { Router } from "express";
 const server = Router();
 
 
-server.get('/anime/:nome', (req, resp) => {
+server.get('/anime/:id', (req, resp) => {
     try {
-        const nome = req.params.nome;
-        const y = anime(nome);
+        const id = req.params.id;
+        const y = anime(id);
 
         resp.send({
             anime:y
