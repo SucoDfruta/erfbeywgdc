@@ -1,5 +1,6 @@
-import server from '../controller/controller.js';
 import { con } from './connection.js'
+
+
 
 export async function buscar(id) {
     const comando =
@@ -22,3 +23,4 @@ export async function inserir(anime) {
 
     return anime;
 }
+
