@@ -19,5 +19,5 @@ export async function inserir(anime) {
     const [resposta] = await con.query(comando, [anime.nome]);
     anime.id = resposta.insertId;
 
-    return filme;
+    return anime;
 }
