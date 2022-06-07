@@ -15,7 +15,7 @@ export async function buscar(id) {
 
 export async function inserir(anime) {
     const comando = 
-        `INSERT INTO tb_filme (id_anime, nm_anime)
+        `INSERT INTO tb_lista (id_anime, nm_anime)
                        VALUES (?) `
     
     const [resposta] = await con.query(comando, [anime.nome]);

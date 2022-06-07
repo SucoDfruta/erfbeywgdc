@@ -26,7 +26,7 @@ server.post('/anime', async (req, resp) => {
         const y = await inserir(busc);
 
         resp.send({
-            y: inserir
+            inserir: y
         })
     } 
     catch (err) {
