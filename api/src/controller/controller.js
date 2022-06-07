@@ -1,16 +1,16 @@
 import { Router } from "express";
-import { buscar, inserir} from "../repository/repository.js"; 
+import { buscar, inserir, buscarportodos} from "../repository/repository.js"; 
 
 const server = Router();
 
 
-server.get('/anime/:id', (req, resp) => {
+server.get('/anime/:id', async (req, resp) => {
     try {
         const id = req.params.id;
-        const y = buscar(id);
+        const busca = await buscar(id);
 
         resp.send({
-            anime:y
+            anime:busca
         })
     } 
     catch (err) {
@@ -22,12 +22,12 @@ server.get('/anime/:id', (req, resp) => {
 
 server.post('/anime', async (req, resp) => {
     try {
-        const busc = req.body;
-        const y = await inserir(busc);
+    const nome = req.body;
+    const y = await inserir(nome);
 
-        resp.send({
-            inserir: y
-        })
+        resp.send(
+            y
+        )
     } 
     catch (err) {
         resp.status(404).send({
@@ -36,10 +36,9 @@ server.post('/anime', async (req, resp) => {
     }
 });
 
-server.get('/anime/:id', async (req, resp) => {
+server.get('/anime/', async (req, resp) => {
     try {
-        const id = req.params.id;
-        const busca = await buscar(id);
+        const busca = await buscarportodos();
 
         resp.send({
             anime:busca

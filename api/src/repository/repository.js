@@ -13,14 +13,22 @@ export async function buscar(id) {
     return linhas[0];
 }
 
-export async function inserir(anime) {
+export async function inserir(nome) {
     const comando = 
-        `INSERT INTO tb_lista ( nm_anime)
+        `INSERT INTO tb_lista (nm_anime)
                        VALUES (?) `
     
-    const [resposta] = await con.query(comando, [anime.nome]);
-    anime.id = resposta.insertId;
-
-    return anime;
+    const [resposta] = await con.query(comando, [nome.nome]);
+    return resposta;
 }
 
+
+
+export async function buscarportodos() {
+    const comando =
+        ` select * 
+          from tb_lista`;
+    
+    const [linhas] = await con.query(comando);
+    return linhas;
+}
