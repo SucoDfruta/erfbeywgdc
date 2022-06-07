@@ -36,4 +36,21 @@ server.post('/anime', async (req, resp) => {
     }
 });
 
+server.get('/anime/:id', async (req, resp) => {
+    try {
+        const id = req.params.id;
+        const busca = await buscar(id);
+
+        resp.send({
+            anime:busca
+        })
+    } 
+    catch (err) {
+        resp.status(404).send({
+            erro: err.message
+        })
+    }
+});
+
+
 export default server;
