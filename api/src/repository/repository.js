@@ -19,7 +19,7 @@ export async function inserir(nome) {
                        VALUES (?) `
     
     const [resposta] = await con.query(comando, [nome.nome]);
-    nome.id = resposta.insertId;
+    return resposta;
 }
 
 
