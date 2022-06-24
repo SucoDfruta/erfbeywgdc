@@ -20,7 +20,7 @@ server.get('/anime/:id', async (req, resp) => {
     }
 });
 
-server.post('/anime', async (req, resp) => {
+server.post('/anime/inserir', async (req, resp) => {
     try {
     const nome = req.body;
     const y = await inserir(nome);
