@@ -3,7 +3,7 @@ export default function Index(){
         <header>
             <div>
                 <b>
-                    <p>Seja bem vindo, adicione e busque seus animes </p>
+                    <p>Seja bem vindo, adicione e busque seus viloês favoritos MUAHAHAHAHA </p>
                 </b>
             </div>
         </header>

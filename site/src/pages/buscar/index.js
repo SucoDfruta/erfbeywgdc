@@ -5,7 +5,9 @@ export default function Index(){
         <main className='tag-mae'>
             <Cabe />
             <div>
-                <h1>Buscar todos os animes</h1>
+                <h1>Buscar todos os viloês</h1>
+
+                <input type=' text ' name=' search ' placeholder=' buscar ' />
             
             </div>
         </main>

@@ -1,10 +1,12 @@
-create database infodanime;
+create database infocvilao;
 
-use infodanime;
+use infocvilao;
 
 create table tb_lista(
-	id_anime		int primary key auto_increment,
-    nm_anime		varchar(50)
+	id_vilao		int primary key auto_increment,
+    nm_vilao		varchar(50),
+    ds_maldades     varchar(50),
+    ds_tempoder     boolean
 );
 
 

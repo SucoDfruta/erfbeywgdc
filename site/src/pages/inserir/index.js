@@ -9,8 +9,8 @@ export default function Index(){
 
     async function Click(){
         try {
-            const r = await cadastrarAnime(nome);
-            alert('anime cadastrado')
+            const r = await cadastrarVilao(nome);
+            alert('Vilao cadastrado')
         } catch (err) {
             alert(err.message);
         }
@@ -22,11 +22,11 @@ export default function Index(){
             <div >
                 <hr/>
                 <div>
-                    <h1>Vamos cadastrar o anime </h1>
+                    <h1>Bora cadastraro vilao</h1>
                 </div>
                 
                 <div>
-                    Nome do anime:
+                    Nome do vilao:
                     <input type='text' className='inputzin'value={nome} onChange={e => setNome(e.target.value)}></input>
                 </div>
                 <div>
